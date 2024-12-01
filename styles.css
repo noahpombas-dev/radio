@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --background: #ffffff;
+    --text: #2d3436;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.player {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.station-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.station-btn {
+    background-color: var(--secondary);
+    border: none;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.station-btn i {
+    font-size: 1.5rem;
+}
+
+.station-btn:hover {
+    background-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.station-btn.active {
+    background-color: var(--primary);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.control-btn {
+    background-color: var(--primary);
+    border: none;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.control-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text);
+}
+
+#volumeSlider {
+    -webkit-appearance: none;
+    width: 150px;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--secondary);
+    outline: none;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 5px var(--shadow);
+}
+
+#volumeSlider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 5px var(--shadow);
+}
+
+#volumePercentage {
+    min-width: 40px;
+    text-align: center;
+}
+
+#nowPlaying {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 300;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#nowPlaying i {
+    color: var(--primary);
+}
+
+@media (max-width: 600px) {
+    .station-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+}

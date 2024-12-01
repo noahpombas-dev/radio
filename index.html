@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern European Radio Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/e462f26d9e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Modern European Radio</h1>
+        <div class="player">
+            <div class="station-list">
+                <button class="station-btn" data-station="https://stream.rccb.pt/;">
+                    <i class="fas fa-music"></i>
+                    <span>Portugal <br>(Only Music)</span>
+                </button>
+                <button class="station-btn" data-station="https://icstream.rds.radio/rds">
+                    <i class="fas fa-microphone"></i>
+                    <span>Italy <br>(Radio)</span>
+                </button>
+                <button class="station-btn" data-station="https://stream.srg-ssr.ch/m/rsp/mp3_128">
+                    <i class="fas fa-microphone"></i>
+                    <span>Switzerland <br>(Radio)</span>
+                </button>
+                <button class="station-btn" data-station="https://dispatcher.rndfnk.com/br/br1/obb/mp3/mid">
+                    <i class="fas fa-microphone"></i>
+                    <span>Germany <br>(Radio)</span>
+                </button>
+                <button class="station-btn" data-station="https://icecast.radiofrance.fr/fip-midfi.mp3">
+                    <i class="fas fa-microphone"></i>
+                    <span>France <br>(Radio)</span>
+                </button>
+            </div>
+            <div class="controls">
+                <button id="playPauseBtn" class="control-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <div class="volume-control">
+                    <i class="fas fa-volume-down"></i>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="100">
+                    <span id="volumePercentage">100%</span>
+                </div>
+            </div>
+            <div id="nowPlaying">
+                <i class="fas fa-headphones"></i>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
