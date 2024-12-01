@@ -31,8 +31,8 @@ A sleek, modern online radio player featuring stations from various European cou
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/modern-european-radio.git
-   cd modern-european-radio
+   git clone https://github.com/noahpombas-dev/radio.git
+   cd radio
    ```
 2. Open the `index.html` file in your preferred browser:
    ```bash
@@ -41,7 +41,7 @@ A sleek, modern online radio player featuring stations from various European cou
 
 ## 📂 Project Structure
 ```plaintext
-modern-european-radio/
+radio/
 ├── index.html        # Main HTML file
 ├── styles.css        # Styling for the player
 ├── script.js         # JavaScript for interactivity
